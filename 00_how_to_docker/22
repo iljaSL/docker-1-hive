@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    22                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/09 13:40:29 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/09 15:31:12 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+eval $(docker-machine env Aiur)
+docker swarm join --token $(cat ~/.worker_token) $(docker-machine ip Char):2377
+
+# ------------------------------------------------------------------------------
+# Activate the vm Char again: eval $(docker-machine env Char)
+# Check the changes with: docker node ls and docker info 
+# ------------------------------------------------------------------------------

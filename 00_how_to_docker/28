@@ -1,0 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    28                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/09 16:38:30 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/09 17:20:21 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service create -d --network overmind --name marines --replicas 2 -e OC_USERNAME=root -e OC_PASSWD=root 42school/marine-squad
+
+# ------------------------------------------------------------------------------
+# For more information about engineering-bay:
+# https://hub.docker.com/r/42school/marine-squad
+# Check if it worked:
+# docker service ls
+# ------------------------------------------------------------------------------

@@ -1,0 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    09                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/08 11:42:08 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/15 09:33:57 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+apt-get update && apt-get upgrade -y && apt-get install -y build-essential git
+
+# ------------------------------------------------------------------------------
+# First run this command to run debian:
+# docker run -ti --rm debian
+# For more information about compilers:
+# https://www.cyberciti.biz/faq/debian-linux-install-gnu-gcc-compiler/
+# For the latest stable version for your release of Debian/Ubuntu:
+# apt-get install git
+# ------------------------------------------------------------------------------

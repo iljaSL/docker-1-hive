@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    23                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/09 15:31:39 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/09 15:44:20 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker network create -d overlay overmind
+
+# ------------------------------------------------------------------------------
+# -d (--driver string) -> Driver to manage the Network, by default its "bridge".
+# For more information about docker network:
+# https://docs.docker.com/network/overlay/
+# ------------------------------------------------------------------------------

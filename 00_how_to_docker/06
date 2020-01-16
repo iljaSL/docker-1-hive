@@ -1,0 +1,24 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    06                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/08 09:43:00 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/15 09:30:23 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker run -d -p 5000:80 --name overlord --restart=always nginx
+
+# ------------------------------------------------------------------------------
+# docker run --help:
+# -d, --detach — Run container in background and print container ID.
+# --name string — Assign a name to the container.
+# -p, --publish list — Publish a container's port(s) to the host.
+# The --restart tutorial:
+# https://docs.docker.com/config/containers/start-containers-automatically/
+# Test if the nginx server works:
+# http://192.168.99.101:5000
+# ------------------------------------------------------------------------------

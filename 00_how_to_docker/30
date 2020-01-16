@@ -1,0 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    30                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/09 17:23:28 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/09 17:26:24 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service scale -d marines=20
+
+# ------------------------------------------------------------------------------
+#  For more informations about docker service scale:
+# https://docs.docker.com/engine/reference/commandline/service_scale/
+# Check the logs, its fun!
+# docker service logs -f $(docker service ps marines -f "name=marines.11" -q)
+# ------------------------------------------------------------------------------

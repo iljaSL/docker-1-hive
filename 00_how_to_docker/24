@@ -1,0 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    24                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/09 15:44:38 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/09 16:08:14 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service create -d --network overmind --name orbital-command -e RABBITMQ_DEFAULT_USER=root -e RABBITMQ_DEFAULT_PASS=root rabbitmq
+
+# ------------------------------------------------------------------------------
+# -d -> Exit immediately instead of waiting for the service to converge.
+# -e -> Set environment variables.
+# For more information about the RabbitMQ (open source multi-protocol messaging 
+# broker) Image in Docker:
+# https://hub.docker.com/_/rabbitmq/
+# ------------------------------------------------------------------------------

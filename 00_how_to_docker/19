@@ -1,0 +1,37 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    19                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/09 11:10:10 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/15 09:38:25 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker run --name Abathur -v ~/:/root -p 3000:3000 -dit python:2-slim
+docker exec Abathur pip install Flask
+echo 'from flask import Flask\napp = Flask(__name__)\n@app.route("/")\ndef hello_world():\n\treturn "<h1>Hello, World!</h1>"' > ~/app.py
+docker exec -e FLASK_APP=/root/app.py Abathur flask run --host=0.0.0.0 --port 3000
+
+# ------------------------------------------------------------------------------
+# The commands can NOT be runned all at the same time otherwise you will get a 
+# syntax error, launch them one at a time.
+# docker exec -> Run a command in a running container, more information:
+# https://docs.docker.com/engine/reference/commandline/exec/
+# -v -> volume list
+# -p -> pubish list
+# pip -> install and update Flask 
+# Flask(web framework) - https://flask.palletsprojects.com/en/1.0.x/quickstart/
+# To run the application you can either use the flask command or python’s -m 
+# switch with Flask. Before you can do that you need to tell your terminal the 
+# application to work with by exporting the FLASK_APP environment variable:
+# $ export FLASK_APP=hello.py
+# $ flask run
+#  * Running on http://127.0.0.1:5000/
+# Check if it worked on your web browser:
+# http://192.168.99.101:3000/
+# or curl $(docker-machine ip Char):3000
+# curl -> a tool to transfer data from or to a server.
+# ------------------------------------------------------------------------------

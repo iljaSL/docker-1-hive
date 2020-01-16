@@ -1,0 +1,32 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    01                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/06 15:56:53 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/10 10:43:14 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker-machine create --driver virtualbox Char
+
+# ------------------------------------------------------------------------------
+# Installing Homebrew on the school Mac's in order to install docker:
+#
+# rm -rf $HOME/.brew && git clone --depth=1 https://github.com/Homebrew/brew 
+# $HOME/.brew && echo 'export PATH=$HOME/.brew/bin:$PATH' >> $HOME/.zshrc && 
+# source $HOME/.zshrc && brew update
+# ------------------------------------------------------------------------------
+# Installing Docker:
+# brew install docker docker-machine
+# ------------------------------------------------------------------------------
+# Move Docker to goinfre:
+# mv .docker/ /goinfre/ismelich
+# Create Soft Link:
+# ln -s /goinfre/ismelich/.docker $HOME
+# ------------------------------------------------------------------------------
+# Explanation for the answer is found at the docker documentation:
+# https://docs.docker.com/machine/reference/create/
+# ------------------------------------------------------------------------------

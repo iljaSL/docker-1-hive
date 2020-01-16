@@ -1,0 +1,29 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    12                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/08 15:20:29 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/08 15:56:09 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker run -d --name spawning-pool --restart=on-failure:10 -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings -v hatchery:/var/lib/mysql mysql --default-authentication-plugin=mysql_native_password
+
+# ------------------------------------------------------------------------------
+# docker -d = --detach -> container starts up and run in background.
+# --restart=on-failure:10 -> Restart the container if it stops.
+# docker -e -> Set environment variables.
+# MYSQL: Open-Source database management system
+# For more informations: https://hub.docker.com/_/mysql
+# MYSQL_ROOT_PASSWORD -> Its mandatory to set a password.
+# MYSQL_DATABASE -> Allows you to specify the name of a database in our case
+# zerglings.
+# mysql --default-authentication-plugin=mysql_native_password ->
+# is needed for wordpress, its not working otherwise with mysql latest
+# container, mysql changed the password authenticication method.
+# For more information:
+# https://dev.mysql.com/doc/refman/8.0/en/native-pluggable-authentication.html
+# ------------------------------------------------------------------------------

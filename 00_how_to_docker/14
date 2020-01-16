@@ -1,0 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    14                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/08 15:56:55 by ismelich          #+#    #+#              #
+#    Updated: 2020/01/09 10:38:08 by ismelich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker run -d --name lair -p 8080:80 --link spawning-pool -e WORDPRESS_DB_HOST='spawning-pool' -e WORDPRESS_DB_USER='root' -e WORDPRESS_DB_PASSWORD='Kerrigan' -e WORDPRESS_DB_NAME='zerglings' wordpress
+
+# ------------------------------------------------------------------------------
+# More informations aboout Legacy container links:
+# https://docs.docker.com/network/links/
+# Check if the deployment worked in your web browser:
+# http://192.168.99.101:8080/
+# ------------------------------------------------------------------------------
