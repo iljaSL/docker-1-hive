@@ -6,7 +6,7 @@
 #    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/10 12:12:19 by ismelich          #+#    #+#              #
-#    Updated: 2020/01/15 10:30:14 by ismelich         ###   ########.fr        #
+#    Updated: 2020/02/11 11:26:21 by ismelich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,6 @@ FROM debian
 MAINTAINER ismelich <ismelich@student.hive.fi>
 
 ENV TS3SERVER_LICENSE=accept
-
-ENV TS3SERVER_DB_HOST: IP:192.168.99.101
 
 WORKDIR /home/teamspeak
 

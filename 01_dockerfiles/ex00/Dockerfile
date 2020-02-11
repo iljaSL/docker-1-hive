@@ -6,13 +6,13 @@
 #    By: ismelich <ismelich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/10 11:42:45 by ismelich          #+#    #+#              #
-#    Updated: 2020/01/10 12:07:20 by ismelich         ###   ########.fr        #
+#    Updated: 2020/02/11 11:25:24 by ismelich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FROM alpine
 
-MAINTAINER ismelich <imselich@student.hive.fi> 
+MAINTAINER ismelich <ismelich@student.hive.fi> 
 
 # Set alpine to the newest version and install vim while lunching alpine
 RUN apk update && apk upgrade && apk add vim
