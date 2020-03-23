@@ -18,3 +18,4 @@ up the app.
 This suite of projects on Docker will help you better understand this specific tool, but
 also the various aspects of applications development using microservices.s
 
+I used this app: https://github.com/RailsApps/rails_apps_composer FOR 01_dockerfiles/ex02/
